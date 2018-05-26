@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { string } from 'prop-types';
-//import './Contact.css';
+import './Contact.css';
 
 class Contact extends Component {
   render() {
     const { name, email, phoneNumber, userName } = this.props;
     return (
-      //Add class
-      <div>
+      <div className="Restaurant">
         {name}, {email}, {phoneNumber}, {userName}
         <button>X</button>
       </div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { object } from 'prop-types';
+import PropTypes from 'prop-types';
 import './NewContact.css';
 
 class NewContact extends Component {
@@ -12,7 +12,13 @@ class NewContact extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    //Add to Contacts list
+    const contactObject = {
+      name: this.name,
+      email: this.email,
+      phoneNumber: this.phoneNumber,
+      userName: this.userName
+    };
+    this.props.contacts.push(contactObject);
   };
 
   render() {
@@ -20,30 +26,38 @@ class NewContact extends Component {
 
     return (
       <form className="NewContact">
+        Nombre:
         <input
           type="text"
           value={name}
-          placeholder="Contact Name"
+          placeholder="Name"
           onChange={event => this.setState({ name: event.target.value })}
         />
+        Email:
         <input
           type="text"
           value={email}
-          placeholder="Contact Name"
+          placeholder="E-mail Address"
           onChange={event => this.setState({ email: event.target.value })}
         />
+        <br />
+        <br />
+        Numero:
         <input
           type="text"
           value={phoneNumber}
-          placeholder="Contact Name"
+          placeholder="Phone Number"
           onChange={event => this.setState({ phoneNumber: event.target.value })}
         />
+        Usuario:
         <input
           type="text"
           value={userName}
-          placeholder="Contact Name"
+          placeholder="User Name"
           onChange={event => this.setState({ userName: event.target.value })}
         />
+        <br />
+        <br />
         <button onClick={this.handleSubmit} disabled={!name}>
           Submit
         </button>
@@ -53,7 +67,7 @@ class NewContact extends Component {
 }
 
 NewContact.propTypes = {
-  contacts: object
+  contacts: PropTypes.array
 };
 
 export default NewContact;
