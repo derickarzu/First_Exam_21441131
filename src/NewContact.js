@@ -26,14 +26,14 @@ class NewContact extends Component {
 
     return (
       <form className="NewContact">
-        Nombre:
+        Nombre:{' '}
         <input
           type="text"
           value={name}
           placeholder="Name"
           onChange={event => this.setState({ name: event.target.value })}
-        />
-        Email:
+        />{' '}
+        Email:{' '}
         <input
           type="text"
           value={email}
@@ -42,14 +42,14 @@ class NewContact extends Component {
         />
         <br />
         <br />
-        Numero:
+        Numero:{' '}
         <input
           type="text"
           value={phoneNumber}
           placeholder="Phone Number"
           onChange={event => this.setState({ phoneNumber: event.target.value })}
-        />
-        Usuario:
+        />{' '}
+        Usuario:{' '}
         <input
           type="text"
           value={userName}
