@@ -1,0 +1,23 @@
+.Contact {
+  margin: 1em;
+  min-width: 200px;
+  text-align: center;
+  border: 1px solid #eee;
+  padding: 1em;
+}
+
+.Contact--name {
+  margin-top: 0;
+}
+
+.Contact--email {
+  margin-top: 0;
+}
+
+.Contact--phoneNumber {
+  margin-top: 0;
+}
+
+.Contact--userName {
+  margin-top: 0;
+}

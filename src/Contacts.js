@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { object } from 'prop-types';
 import Contact from './Contact';
 //import map from 'lodash/map';
-//import './Contacts.css';
+import './Contacts.css';
 
 class Contacts extends Component {
   constructor(props) {
@@ -11,13 +11,12 @@ class Contacts extends Component {
 
   render() {
     const { contacts } = this.props;
-    //Add Class to section and show all contacts
-    return <section>{}</section>;
+    return <section className="Restaurants">{}</section>;
   }
 }
 
 Contacts.propTypes = {
-  contacts: PropTypes.object
+  contacts: object
 };
 
 export default Contacts;
